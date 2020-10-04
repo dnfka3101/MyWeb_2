@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+	1.
+		id 5글자 이상 10글자 미만
+		pw 6글자 이상 14글자 미만
+		pw 두 개가 일치,
+		전부 필수 입력
+		join 버튼 클릭 후 모든 조건이 만족하면 success
+		하나라도 만족하지 못하면 Fail
+	2.
+		두 번째 패스워드 입력시 한 글자씩 입력 할때마다 두 개의 값 비교
+		다르면 pwResult에 패스워드가 다르다고 출력, 글자색은 빨강
+		같으면 pwResult에 패스워드가 일치하다라고 출력, 글자색은 파랑
+	3.
+	 	name,phone,email 입력하려 하다 나올 때 비어있으면 꼭 입력해야한다는
+	 	메시지 출력,
+	 -->
+	<p> Id : <input id ="id" type = "text"></p>
+	<div id = "idResult"></div>
+	<p> Pw : <input id = "pw"type = "password"></p>
+	<p> Pw : <input id = "pw2" type = "password"></p>
+	<div id ="pwResult"></div>
+	<p> Name : <input id = "name" type = "text"></p>
+	<div id = "nameResult"></div>
+	<p> Phone : <input id="phone" type = "text"></p>
+	<div id = "phoneResult"></div>
+	<p> E_mail : <input id="mail" type = "text"></p>
+	<div id = "emailResult"></div>
+	<input type = "button" value = "join"> 
+
+<script type="text/javascript">
+	var id = document.getElementById("id");
+		id.addEventListener('keyup', function() {
+			var str = id.value;
+			str = str.length;
+			 if(5<=str.length<10){
+					document.getElementById("idResult").innerHTML ="다시 입력하세요.";
+				}
+		})
+			
+	
+</script>
+</body>
+</html>
